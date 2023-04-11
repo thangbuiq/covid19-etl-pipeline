@@ -1,0 +1,5 @@
+dagster==1.2.3
+dagit==1.2.3
+pyspark==3.3.2
+dagster-postgres==0.18.3
+dagster-spark==0.18.3
