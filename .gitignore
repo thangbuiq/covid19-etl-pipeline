@@ -5,6 +5,7 @@ __pycache__/
 
 # Environment file
 env
+*.png
 
 # C extensions
 *.so
