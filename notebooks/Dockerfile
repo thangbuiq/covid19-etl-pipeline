@@ -25,4 +25,6 @@ RUN curl -O https://repo1.maven.org/maven2/software/amazon/awssdk/s3/2.18.41/s3-
 
 RUN pip install minio==7.1.13 \
     dagster==1.1.20 \
-    pyspark==3.3.2
+    plotly==5.14.1 \
+    tenacity==8.2.2 \
+    dash

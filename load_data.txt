@@ -1,0 +1,15 @@
+LOAD DATA LOCAL INFILE '/tmp/covid19-clean/covid19_cases_position.csv' 
+INTO TABLE covid19_cases_position FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/tmp/covid19-clean/covid19_country_wise.csv' 
+INTO TABLE covid19_country_wise FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/tmp/covid19-clean/covid19_time_series.csv' 
+INTO TABLE covid19_time_series FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/tmp/covid19-clean/covid19_worldometer.csv' 
+INTO TABLE covid19_worldometer FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;

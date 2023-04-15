@@ -22,8 +22,7 @@ class PostgreSQLIOManager(IOManager):
     def load_input(self, context: InputContext) -> pd.DataFrame:
         pass
     def handle_output(self, context: OutputContext, obj: pd.DataFrame):
-        schema, table = context.asset_key.path[-2],
-        context.asset_key.path[-1]
+        schema, table = context.asset_key.path[-2], context.asset_key.path[-1]
         with connect_psql(self._config) as conn:
             # insert new data
             ls_columns = (context.metadata or {}).get("columns", [])

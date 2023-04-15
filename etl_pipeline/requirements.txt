@@ -1,8 +1,8 @@
-dagster==1.2.3
-dagit==1.2.3
-dagster-postgres==0.18.3
-dagster-aws==0.18.3
-dagster-spark==0.18.3
+dagster==1.2.6
+dagit==1.2.6
+dagster-postgres==0.18.6
+dagster-aws==0.18.6
+dagster-spark==0.18.6
 pyspark==3.3.2
 pandas==1.5.3
 SQLAlchemy==1.4.46

@@ -13,3 +13,7 @@ to_mysql:
 	docker exec -it de_mysql mysql --local-infile=1 -u"${MYSQL_USER}" -p"${MYSQL_PASSWORD}" ${MYSQL_DATABASE}
 to_mysql_root:
 	docker exec -it de_mysql mysql -u"root" -p"${MYSQL_ROOT_PASSWORD}" ${MYSQL_DATABASE}
+plot:
+	python3 ./notebooks/my_dash_app.py
+host: 
+	ngkrok http 8050

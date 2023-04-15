@@ -1,12 +1,13 @@
 import os
 from dagster import Definitions
-from .assets.bronze_layer import covid19_cases_position, covid19_country_wise, covid19_time_series, covid19_worldometer
-from .assets.silver_layer import covid19_country_by_continent, covid19_cases_by_time, covid19_cases_infos
-from .assets.gold_layer   import covid19_daily_stats
+from .assets.bronze_layer    import covid19_cases_position, covid19_country_wise, covid19_time_series, covid19_worldometer
+from .assets.silver_layer    import covid19_cases_country, covid19_cases_by_time, covid19_cases_infos
+from .assets.gold_layer      import covid19_daily_stats, covid19_continent_stats
+from .assets.warehouse_layer import warehouse_covid19_daily_stats, warehouse_covid19_continent_stats
 from .resources.minio_io_manager import MinIOIOManager
 from .resources.mysql_io_manager import MySQLIOManager
-from .resources.psql_io_manager import PostgreSQLIOManager
 from .resources.spark_io_manager import SparkIOManager
+from .resources.psql_io_manager  import PostgreSQLIOManager
 
 MYSQL_CONFIG = {
     "host": os.getenv("MYSQL_HOST"),
@@ -34,15 +35,18 @@ defs = Definitions(
         covid19_country_wise,
         covid19_time_series,
         covid19_worldometer,
-        covid19_country_by_continent,
+        covid19_cases_country,
         covid19_cases_by_time,
         covid19_cases_infos,
-        covid19_daily_stats
+        covid19_daily_stats,
+        covid19_continent_stats,
+        warehouse_covid19_daily_stats,
+        warehouse_covid19_continent_stats
     ],
     resources={
         "mysql_io_manager": MySQLIOManager(MYSQL_CONFIG),
         "minio_io_manager": MinIOIOManager(MINIO_CONFIG),
-        "psql_io_manager": PostgreSQLIOManager(PSQL_CONFIG),
-        "spark_io_manager": SparkIOManager(MINIO_CONFIG)
+        "spark_io_manager": SparkIOManager(MINIO_CONFIG),
+        "psql_io_manager" : PostgreSQLIOManager(PSQL_CONFIG)
     }
 )
