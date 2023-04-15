@@ -28,4 +28,4 @@ The project is structured as follows:
 * Dash: An open-source Python framework for building analytical web applications.
 
 
-**> Cre(dataset):** https://www.kaggle.com/datasets/imdevskp/corona-virus-report
+> **Cre(dataset):** https://www.kaggle.com/datasets/imdevskp/corona-virus-report
