@@ -64,7 +64,7 @@ def covid19_daily_stats(context,
     key_prefix=["gold", "medical"],
     io_manager_key="spark_io_manager",
     group_name="gold_layer",
-    compute_kind="plotly"
+    compute_kind="pandas"
 )
 def covid19_continent_stats(context, 
                             covid19_cases_country: pd.DataFrame) -> Output[pd.DataFrame]:

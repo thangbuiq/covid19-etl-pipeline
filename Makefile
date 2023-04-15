@@ -1,3 +1,4 @@
+SHELL:=/bin/bash
 include env
 build:
 	docker compose build
@@ -15,5 +16,5 @@ to_mysql_root:
 	docker exec -it de_mysql mysql -u"root" -p"${MYSQL_ROOT_PASSWORD}" ${MYSQL_DATABASE}
 plot:
 	python3 ./notebooks/my_dash_app.py
-host: 
-	ngkrok http 8050
+host:
+	ngrok http 8050
