@@ -5,6 +5,7 @@
   -->
 # Covid19-ETL-Datapipeline
 ![GitHub last commit](https://img.shields.io/github/last-commit/thangbuiq/covid19-etl-pipeline?color=green) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dash)
+
 This repository contains a data engineering project that implements an **ETL (Extract, Transform, Load)** data pipeline using `Dagster, Spark, Plotly, Dash`. The goal of this project is to extract data related to Covid-19 from various sources, transform it to a standard format, and load it into a database. The transformed data is then used to create interactive dashboards using `Plotly` and `Dash`.
 
 ## Project Structure
